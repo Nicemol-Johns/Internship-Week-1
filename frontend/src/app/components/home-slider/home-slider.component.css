@@ -1,0 +1,9 @@
+.d-flex{
+    flex-direction:column;
+}
+.home-carousel{
+    margin-top: 50px;
+}
+img{
+    border-image: round;
+}

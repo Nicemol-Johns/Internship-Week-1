@@ -1,0 +1,47 @@
+.container{
+    width:fit-content;
+    color:black;
+    font-weight: 500;
+    text-align: center;
+    font-size: large;
+}
+.box {
+    background-image: url("../../../assets/bg-4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin:0px;
+    padding:0px;
+    height: 85vh; 
+    width: 100vw; 
+}
+input{
+    background-color: transparent;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    border-bottom:3px solid black;
+}
+::placeholder{
+    color:rgb(13, 13, 13);
+    font-weight: 700;
+}
+
+.form-container{
+    width: 400px; /* Adjust the width as needed */
+    margin: 150px auto; 
+    background-color: rgba(199, 203, 207, 0.511);
+    border-radius:5px;
+}
+.aside{
+    background-color: black;
+}
+.d-flex{
+    padding-left:auto;
+    padding-right: auto;
+    
+    border-radius: 5px;
+}
+figure img{
+    border-image: round;
+}

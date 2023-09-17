@@ -1,0 +1,54 @@
+<app-header></app-header>
+<div class=" box">
+    <div class="container ">
+        <div class="d-flex flex-row ">
+            <fieldset class="form-container p-3">
+              <h2 class="text-center  mb-4">Login</h2>
+                <form #userform = "ngForm"  (ngSubmit)="userLogin()">
+                
+                    <div class="form-group">
+                  
+                
+                      <input type="email" 
+                      class="form-control mt-2" 
+                      required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                      [(ngModel)]="user.email" placeholder="Email"
+                      [class.is-invalid]="email.invalid && email.touched"
+                      name="Email" #email="ngModel">
+                
+                      <small [class.d-none]="email.valid || email.untouched"
+                       class="text-dark">Email is required and should be valid</small> 
+                
+                    </div>
+                    
+                    <br>
+            
+                
+                    <div class="form-group">
+                      
+                
+                      <input type="text" 
+                      class="form-control mt-2" 
+                      [(ngModel)]="user.password" 
+                      required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                      name="Password" #pwd="ngModel" placeholder="Password"
+                      [class.is-invalid]="pwd.invalid && pwd.touched">
+                
+                      <small [class.d-none]="pwd.valid || pwd.untouched"
+                       class="text-dark">Should consists of alphabets, numbers and atleast 8 characters </small>
+                
+                    </div>
+                
+                    <br>
+                
+                
+                    <button type="submit" 
+                    [disabled]="userform.invalid" 
+                    class="btn btn-primary mx-auto mt-1">Sign Up</button>
+                  </form>
+                </fieldset>
+        </div>
+      </div>  
+  </div>
+<app-footer></app-footer>
+  

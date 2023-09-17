@@ -1,0 +1,13 @@
+.home-body{
+    height:100%;
+    background-image: url("/assets/bg-2.jpg");
+    position:center;
+    background-size: contain;
+    padding-bottom: 3px;
+}
+
+@media (max-width:767px){
+    .home-body{
+        height:100vh;
+    }
+}

@@ -1,0 +1,49 @@
+.wrapper{
+    margin:30px;
+}
+.col{
+    margin-right:0px;
+    padding-right: 0px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+}
+.movie-title{
+    text-align: center;
+}
+.info{
+    position: absolute; /* Position content absolutely within the card */
+    text-align: center; /* Center-align text */
+    width: 100%; /* Occupy the full width of the card */
+    background: rgba(37, 30, 30, 0.418);/* Semi-transparent background for legibility */
+    display: none;
+    top:0;
+    left:0;
+    right:0;
+    padding:67px;
+}
+.card:hover .info{
+    display:block;
+    margin-top:auto;
+    margin-bottom: auto;
+}
+.text {
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:20px;
+    margin-top:10%;
+    padding:10px;
+    width:85%;
+    border:3px solid white;
+    color:white;
+}
+i{
+    font-size: 2rem; 
+    color: rgb(209, 94, 49);
+    cursor:pointer;
+}
+i:hover{
+    transform: scale(1.2);
+}

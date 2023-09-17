@@ -1,0 +1,60 @@
+.footer {
+    background-color: #333; /* Dark background color */
+    position: absolute;
+    padding: 20px;
+    height: 50vh;
+    width: 100%;
+}
+
+.footer hr {
+    color: #fff; /* White color for horizontal lines */
+    height: 2px;
+    width: 45%;
+}
+
+.footer label {
+    color: #fff; /* White color for labels */
+}
+
+.footer-contents {
+    height: 30vh;
+}
+
+.name {
+    margin-bottom: 5px;
+}
+
+.name hr {
+    width: 45%;
+}
+
+.name img {
+    padding-left: 5px;
+}
+
+li {
+    list-style-type: none;
+    color: #fff; /* White color for list items */
+    padding: 10px;
+}
+
+h4 {
+    color: #fff; /* White color for headings */
+}
+
+.location {
+    margin-left: 138px;
+}
+
+i {
+    font-size: 3rem;
+    color: #c1793d; 
+    padding: 5px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff; 
+}

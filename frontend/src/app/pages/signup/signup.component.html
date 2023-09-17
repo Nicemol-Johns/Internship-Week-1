@@ -1,0 +1,109 @@
+<app-header></app-header>
+<div class=" box">
+  <div class="container ">
+      <div class="d-flex flex-row">
+
+          <div class="form-container p-4">
+            <h2 class="text-center mb-4 ">Signup</h2>
+              <form #userform = "ngForm"  (ngSubmit)="userSignup()">
+    
+                  <div class="form-group">
+                
+              
+                    <input type="text" 
+                    class="form-control" 
+                    required 
+                    [(ngModel)]="user.name" 
+                    name="Name" #name="ngModel"
+                    placeholder="Name"
+                    [class.is-invalid]="name.invalid && name.touched">
+              
+                    <small [class.d-none]="name.valid || name.untouched" 
+                    class="text-dark">Name is required and should contain only alphabets</small> 
+              
+                  </div>
+                  
+                  <br>
+              
+                  <div class="form-group">
+                    
+              
+                    <input type="email" 
+                    class="form-control" 
+                    required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+                    [(ngModel)]="user.email" 
+                    placeholder="Email"
+                    [class.is-invalid]="email.invalid && email.touched"
+                    name="Email" #email="ngModel">
+              
+                    <small [class.d-none]="email.valid || email.untouched"
+                     class="text-dark">Email is required and should be valid</small> 
+              
+                  </div>
+                  
+                  <br>
+              
+                  <div class="form-group">
+                    
+              
+                    <input type="text" 
+                    class="form-control" 
+                    [(ngModel)]="user.ph" 
+                    name="Contact" #phone="ngModel"
+                    required pattern="^\d{10}$"
+                    placeholder="Phone"
+                    [class.is-invalid]="phone.invalid && phone.touched">
+              
+                    <small [class.d-none]="phone.valid || phone.untouched"
+                     class="text-dark">Phone Number is required and should be 10 digits</small>
+              
+                  </div>
+              
+                  <br>
+                  <div class="form-group">
+                    
+              
+                    <input type="text" 
+                    class="form-control" 
+                    placeholder="Password"
+                    [(ngModel)]="user.password" 
+                    required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+                    name="Password" #pwd="ngModel"
+                    [class.is-invalid]="pwd.invalid && pwd.touched">
+              
+                    <small [class.d-none]="pwd.valid || pwd.untouched"
+                     class="text-dark">Should consists of alphabets, numbers and atleast 8 characters </small>
+              
+                  </div>
+              
+                  <br>
+                  <div class="form-group">
+                    
+              
+                    <input type="text" 
+                    class="form-control" 
+                    placeholder="Confirm Password"
+                    [(ngModel)]="user.confirm_pwd" 
+                    name="ConfirmPassword" #confirm="ngModel"
+                    required 
+                    [class.is-invalid]="isConfirmInvalid() || (confirm.invalid && confirm.touched)">
+              
+                    <small [class.d-none]="confirm.valid || confirm.untouched"
+                    *ngIf = "confirm.touched"
+                     class="text-dark">Field cannot be empty </small>
+                    <small [class.d-none]="user.confirm_pwd===''"
+                    *ngIf="isConfirmInvalid() && user.confirm_pwd!==''"
+                     class="text-dark">Passwords do not match</small>
+                  </div>
+              
+                  <br>
+              
+                  <button type="submit" 
+                  [disabled]="userform.invalid || isConfirmInvalid()" 
+                  class="btn btn-primary">Sign Up</button>
+                </form>
+              </div>
+      </div>
+    </div>  
+</div>
+<app-footer></app-footer>
